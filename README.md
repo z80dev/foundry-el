@@ -12,7 +12,12 @@ This package provides an Emacs interface for launching and configuring Anvil, th
 
 1. Ensure you have Foundry installed on your system. If not, follow the [official Foundry installation guide](https://book.getfoundry.sh/getting-started/installation).
 
-2. Add the `foundry.el` file to your Emacs load path.
+2. Add the `foundry.el` file to your Emacs load path. If you are using Doom Emacs, add the following to your `packages.el`:
+
+``` elisp
+(package! foundry
+  :recipe (:host github :repo "z80dev/foundry-el" :files ("*.el")))
+```
 
 3. Add the following to your Emacs configuration:
 
