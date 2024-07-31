@@ -1,6 +1,6 @@
-# Foundry Anvil Transient for Emacs
+# Foundry utilities for Emacs
 
-This package provides an Emacs interface for launching and configuring Anvil, the local testnet node from the Foundry suite of Ethereum development tools.
+This package provides an Emacs interface for launching and configuring various foundry commands. Currently it only supports Anvil, the local testnet node from the Foundry suite of Ethereum development tools.
 
 ## Features
 
@@ -24,6 +24,12 @@ This package provides an Emacs interface for launching and configuring Anvil, th
    ```elisp
    (require 'foundry)
    ```
+   
+   *If you are using Doom*, instead use the `use-package!` macro in `config.el`:
+   
+   ```elisp
+    (use-package! foundry)
+   ```
 
 ## Usage
 
@@ -44,7 +50,7 @@ You can customize the preconfigured fork URL options available in the transient.
 3. Add, modify, or remove entries as needed
 4. Save your changes
 
-### Using Elisp in Your Config File
+### Using Elisp in Your Config File (Do this if you use Doom)
 
 Add the following to your Emacs configuration file (e.g., `init.el` or `.emacs`):
 
