@@ -8,9 +8,8 @@
 ;; Modified: July 29, 2024
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "28.1"))
-;; Keywords: abbrev bib c calendar comm convenience data docs emulations extensions faces files frames games hardware help hypermedia i18n internal languages lisp local maint mail matching mouse multimedia news outlines processes terminals tex tools unix vc wp
-;; Homepage: https://github.com/z80/foundry
-;; Package-Requires: ((emacs "24.3"))
+;; Keywords: foundry ethereum
+;; Homepage: https://github.com/z80/foundry-el
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
