@@ -98,5 +98,13 @@
       (pop-to-buffer buffer)))
     (transient-save))
 
+(defun foundry-cast-to-bytes32 (x)
+  (interactive "P")
+  (let* ((cmd (message "cast --to-bytes32 %s" (thing-at-point 'word)))
+         (output (shell-command-to-string cmd)))
+    (if x
+        (insert output)
+      (message output))))
+
 (provide 'foundry)
 ;;; foundry.el ends here
