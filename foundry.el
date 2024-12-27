@@ -19,24 +19,25 @@
 ;;
 ;;; Code:
 
+(require 'foundry-alchemy)
 (require 'transient)
 (require 'comint)
 
-(defcustom foundry-anvil-network-fork-url-options '(("local" . nil))
+(defcustom foundry-anvil-network-fork-url-user-options '(("local" . nil))
   "Alist of anvil options. Each entry is (DISPLAY-NAME . URL)."
   :type '(alist :key-type string :value-type string)
   :group 'foundry)
 
 (defun foundry-anvil-read-fork-url (_prompt _init _hist)
   "Read fork URL with completion from `my-anvil-options'."
-  (let* ((choices (mapcar #'car foundry-anvil-network-fork-url-options))
+  (let* ((choices (mapcar #'car foundry-anvil-network-fork-url-user-options))
          (custom-option "Custom URL...")
          (selected (completing-read "Choose anvil option or enter custom URL: "
                                     (append choices (list custom-option))))
          (url (cond
                ((string= selected custom-option)
                 (read-string "Enter URL: "))
-               (t (cdr (assoc selected foundry-anvil-network-fork-url-options))))))
+               (t (cdr (assoc selected foundry-anvil-network-fork-url-user-options))))))
     (or url "")))
 
 (transient-define-prefix foundry-anvil-launch ()
